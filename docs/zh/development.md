@@ -56,8 +56,8 @@ migration/             # 迁移计划、audit、UI 历史
 | 快速离线安装 | `bun install --force`(少见,用于损坏的 lockfile 恢复) |
 | 在 dev 模式运行 Electron(vite + electron) | `bun run electron:dev` |
 | 从已构建的 `apps/electron/dist/` 启动 Electron | `bun run electron:start` |
-| 启动带 WebUI dev bundle 的 headless server | `bun run server:dev:webui` |
-| 生产 headless server(WebUI 已打包、Pi 已构建) | `bun run server:prod` |
+| 启动带 WebUI bundle 的 headless server | `bun run server:dev:webui`（端口 3100；见 [webui.md](./webui.md)） |
+| 生产 headless server(WebUI 已打包、Pi 已构建) | `bun run server:prod`（需要 `MKAGENT_SERVER_TOKEN`；见 [webui.md](./webui.md)） |
 | 构建 CLI 二进制 | `bun run cli:build`(输出 `apps/cli/dist/mkagent`) |
 | 构建 Pi 子进程 | `bun run server:build:subprocess` |
 | 构建 macOS arm64 dev 签名的 .app | `bun run electron:dist:dev:mac` |
@@ -67,6 +67,8 @@ migration/             # 迁移计划、audit、UI 历史
 | 审计 Craft 测试覆盖率 | `bun run lint:craft-test-coverage` |
 | 校验中/英文 locale parity | `bun run lint:i18n:parity` |
 | 排序 locales | `bun run sort-locales`(只检查:`bun run lint:i18n:sorted`) |
+
+Windows PowerShell、`:5175` 的 Vite HMR，以及 `server:prod` 的 token 要求，见 [webui.md](./webui.md)。
 
 ## 隔离 config 目录
 

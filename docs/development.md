@@ -56,8 +56,8 @@ migration/             # Migration plan, audit, UI history
 | Quick offline install | `bun install --force` (rare, recovers a broken lockfile) |
 | Run Electron in dev (vite + electron) | `bun run electron:dev` |
 | Run Electron from a prebuilt `apps/electron/dist/` | `bun run electron:start` |
-| Start the headless server with the WebUI dev bundle | `bun run server:dev:webui` |
-| Production headless server (WebUI bundled, Pi built) | `bun run server:prod` |
+| Start the headless server with the WebUI bundle | `bun run server:dev:webui` (port 3100; see [webui.md](./webui.md)) |
+| Production headless server (WebUI bundled, Pi built) | `bun run server:prod` (requires `MKAGENT_SERVER_TOKEN`; see [webui.md](./webui.md)) |
 | Build the CLI binary | `bun run cli:build` (output: `apps/cli/dist/mkagent`) |
 | Build the Pi subprocess | `bun run server:build:subprocess` |
 | Build a dev-signed macOS arm64 .app | `bun run electron:dist:dev:mac` |
@@ -67,6 +67,8 @@ migration/             # Migration plan, audit, UI history
 | Audit Craft test coverage | `bun run lint:craft-test-coverage` |
 | Lint English/Chinese locale parity | `bun run lint:i18n:parity` |
 | Sort locales | `bun run sort-locales` (check-only: `bun run lint:i18n:sorted`) |
+
+Windows PowerShell, Vite HMR on `:5175`, and the `server:prod` token requirement are documented in [webui.md](./webui.md).
 
 ## Isolate the config directory
 

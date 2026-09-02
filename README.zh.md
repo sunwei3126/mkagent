@@ -48,7 +48,7 @@ MkAgent 是一个开源、本地优先的 AI Agent 工作区，适合希望更�
 | 界面 | 适用场景 | 命令 |
 | --- | --- | --- |
 | Desktop | 完整的本地体验和 Browser 面板 | `bun run electron:dev` |
-| WebUI | 在浏览器中访问 headless server | `bun run server:prod` |
+| WebUI | 在浏览器中访问 headless server | 见 [WebUI](./docs/zh/webui.md) |
 | CLI | 脚本化、远程控制和终端工作流 | `bun run apps/cli/src/index.ts --help` |
 
 ## 快速开始
@@ -77,12 +77,12 @@ MkAgent 会在 `~/.mkagent/workspaces/default` 创建默认工作区。开发或
 | --- | --- |
 | `bun run electron:dev` | 启动 Electron 开发环境 |
 | `bun run electron:start` | 构建并单次启动 Electron |
-| `bun run server:prod` | 构建并启动带 WebUI 的 headless server |
+| `bun run server:prod` | 构建并启动带 WebUI 的 headless server（需要 `MKAGENT_SERVER_TOKEN`；[WebUI](./docs/zh/webui.md)） |
 | `bun run cli:build` | 构建 CLI bundle |
 | `bun run test` | 运行单元测试和隔离测试 |
 | `bun run validate:ci` | 运行完整的类型、测试、文档工具和本地化检查 |
 
-更多命令和环境变量请参阅[开发指南](./docs/zh/development.md)。
+更多命令和环境变量请参阅[开发指南](./docs/zh/development.md)和 [WebUI](./docs/zh/webui.md)。
 
 ## 架构
 
@@ -115,7 +115,7 @@ packages/
 | 模型 | [连接](./docs/zh/connections.md)、[Ollama](./docs/zh/ollama.md) |
 | 工作方式 | [工作区](./docs/zh/workspaces.md)、[会话](./docs/zh/sessions.md)、[Skills](./docs/zh/skills.md) |
 | 工具 | [Browser](./docs/zh/browser.md)、[附件](./docs/zh/attachments.md)、[文档工具](./docs/zh/document-tools.md) |
-| 运行时 | [CLI](./docs/zh/cli.md)、[权限](./docs/zh/permissions.md)、[网络代理](./docs/zh/network-proxy.md) |
+| 运行时 | [CLI](./docs/zh/cli.md)、[WebUI](./docs/zh/webui.md)、[权限](./docs/zh/permissions.md)、[网络代理](./docs/zh/network-proxy.md) |
 | 项目 | [功能](./docs/zh/featues.md)、[发布](./docs/zh/releases.md)、[上游同步](./docs/zh/upstream-sync.md) |
 
 ## 参与贡献

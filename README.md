@@ -61,7 +61,7 @@ operating system credential manager.
 | Interface | Best for | Command |
 | --- | --- | --- |
 | Desktop | Full local experience and browser pane | `bun run electron:dev` |
-| WebUI | Browser access to the headless server | `bun run server:prod` |
+| WebUI | Browser access to the headless server | See [WebUI](./docs/webui.md) |
 | CLI | Scripting, remote control, and terminal workflows | `bun run apps/cli/src/index.ts --help` |
 
 ## Getting started
@@ -91,13 +91,13 @@ be isolated for development or testing with `CONFIG_DIR=/path/to/directory`.
 | --- | --- |
 | `bun run electron:dev` | Start the Electron development environment |
 | `bun run electron:start` | Build and launch Electron once |
-| `bun run server:prod` | Build and start the headless server with WebUI |
+| `bun run server:prod` | Build and start the headless server with WebUI (needs `MKAGENT_SERVER_TOKEN`; [WebUI](./docs/webui.md)) |
 | `bun run cli:build` | Build the CLI bundle |
 | `bun run test` | Run unit and isolated tests |
 | `bun run validate:ci` | Run the full type, test, document-tool, and localization gate |
 
 More commands and environment variables are documented in the
-[development guide](./docs/development.md).
+[development guide](./docs/development.md) and [WebUI runbook](./docs/webui.md).
 
 ## Architecture
 
@@ -132,7 +132,7 @@ The complete documentation is available in [English](./docs/README.md) and
 | Models | [Connections](./docs/connections.md), [Ollama](./docs/ollama.md) |
 | Work | [Workspaces](./docs/workspaces.md), [sessions](./docs/sessions.md), [Skills](./docs/skills.md) |
 | Tools | [Browser](./docs/browser.md), [attachments](./docs/attachments.md), [document tools](./docs/document-tools.md) |
-| Runtime | [CLI](./docs/cli.md), [permissions](./docs/permissions.md), [network proxy](./docs/network-proxy.md) |
+| Runtime | [CLI](./docs/cli.md), [WebUI](./docs/webui.md), [permissions](./docs/permissions.md), [network proxy](./docs/network-proxy.md) |
 | Project | [features](./docs/featues.md), [releases](./docs/releases.md), [upstream synchronization](./docs/upstream-sync.md) |
 
 ## Contributing

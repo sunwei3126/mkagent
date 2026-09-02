@@ -26,6 +26,7 @@ This directory is the English-language user documentation. A Chinese translation
 | Skills | [skills.md](./skills.md) |
 | Testing | [testing.md](./testing.md) |
 | Upstream synchronization | [upstream-sync.md](./upstream-sync.md) |
+| WebUI | [webui.md](./webui.md) |
 | Workspaces | [workspaces.md](./workspaces.md) |
 
 For a clean start, read [development.md](./development.md), then use [connections.md](./connections.md), [permissions.md](./permissions.md), and [sessions.md](./sessions.md). The `migration/` directory is an implementation archive: its plans and audit snapshots are historical unless a section explicitly says it describes the current code.
